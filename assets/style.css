@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+body
+{
+	font-family: 'Poppins', sans-serif;
+	background: url('img/bg.webp') center;
+	background-size: cover;
+}
+.menu-btn, .close-btn
+{
+	position: absolute;
+	top: 25px;
+	right: 25px;
+	font-size: 20px;
+	color: #fff;
+	cursor: pointer;
+}
+.side-bar
+{
+	position: fixed;
+	top: 0;
+	right: -100%;
+	width: 280px;
+	height: 100%;
+	overflow-y: auto;
+	background: rgba(0, 0, 0, 0.5);
+	transition: 0.6s ease;
+	transition-property: right;
+}
+.side-bar.active
+{
+	right: 0;
+}
+.side-bar .menu
+{
+	width: 100%;
+	margin-top: 60px;
+}
+.side-bar .menu .item
+{
+	cursor: pointer;
+}
+.side-bar .menu .item a 
+{
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	line-height: 48px;
+	color: #fff;
+	padding: 4px 28px;
+}
+.side-bar .menu .item a:hover
+{
+	background: #f19d56;
+	transition: 0.4s;
+}
+.side-bar .menu .item i 
+{
+	margin-right: 14px;
+}
+.side-bar .menu .item a .dropdown
+{
+	position: absolute;
+	right: 14px;
+	transition: 0.4s;
+}
+.side-bar .menu .item a .dropdown.rotate
+{
+	transform: rotate(90deg);
+}
+.side-bar .menu .item .sub-menu
+{
+	display: none;
+	background: rgba(255, 255, 255, 0.1);
+}
+.side-bar .menu .item .sub-menu a 
+{
+	padding-left: 80px;
+}
+main 
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	padding: 0 24px;
+}
+main h1
+{
+	width: 600px;
+	font-size: 60px;
+	text-align: center;
+	line-height: 80px;
+	color: #fff;
+	-webkit-text-stroke: 0.8px rgba(0, 0, 0, 0.8);
+	text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 720px)
+{
+	main h1
+	{
+		width: 100%;
+		font-size: 40px;
+		line-height: 60px;
+	}
+}
