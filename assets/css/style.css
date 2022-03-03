@@ -9,8 +9,6 @@
 body
 {
 	font-family: 'Poppins', sans-serif;
-	background: url('../img/bg.jpg') center;
-	background-size: cover;
 }
 .menu-btn, .close-btn
 {
@@ -85,6 +83,7 @@ body
 }
 main 
 {
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
